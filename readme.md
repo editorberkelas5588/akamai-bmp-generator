@@ -13,7 +13,6 @@ The Akamai BMP Generator is a fully reversed implementation of Akamai's BMP (Bot
 - ✅ fast
 - ✅ Made in goLang
 - ✅ Support for multiple Akamai BMP versions:
-
     - **3.3.4**
     - **3.3.1**
     - **3.3.0**
@@ -46,7 +45,7 @@ By default the server will use devices.json as the device fingerprint file. This
 Example of a request to the server check ```examples/example.go``` for the full example.
 ```go
 func getbmp(client tls_client.HttpClient) ResponseData {
-	req, err := http.NewRequest(http.MethodPost, "http://127.0.0.1:1337/akamai/bmp", strings.NewReader("{\"app\": \"com.ihg.apps.android\",\"lang\": \"en\",\"version\": \"3.3.4\"}"))
+	req, err := http.NewRequest(http.MethodPost, "http://127.0.0.1:1337/akamai/bmp", strings.NewReader("{\"app\":\"com.ihg.apps.android\",\"lang\":\"en_US\",\"version\":\"3.3.4\",\"challenge\":false,\"powUrl\":\"https://m.ihg.com\"}"))
 	if err != nil {
 		log.Println(err)
 	}

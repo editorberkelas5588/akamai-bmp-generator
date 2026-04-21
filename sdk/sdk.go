@@ -27,7 +27,6 @@ import (
 	"unicode"
 
 	http "github.com/bogdanfinn/fhttp"
-
 	"github.com/JulianKnodt/vector"
 	"github.com/google/uuid"
 )
