@@ -13,6 +13,7 @@ The Akamai BMP Generator is a fully reversed implementation of Akamai's BMP (Bot
 - ✅ fast
 - ✅ Made in goLang
 - ✅ Support for multiple Akamai BMP versions:
+    - **4.2.1** (BAP-style header)
     - **3.3.4**
     - **3.3.1**
     - **3.3.0**
@@ -73,5 +74,3 @@ func getbmp(client tls_client.HttpClient) ResponseData {
 }
 
 ```
-
-

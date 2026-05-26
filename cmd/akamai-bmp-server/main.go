@@ -22,6 +22,7 @@ import (
 	bmp334 "xvertile/akamai-bmp/bm/3.3.4"
 	bmp339 "xvertile/akamai-bmp/bm/3.3.9"
 	bmp402 "xvertile/akamai-bmp/bm/4.0.2"
+	bmp421 "xvertile/akamai-bmp/bm/4.2.1"
 	dm "xvertile/akamai-bmp/dm"
 )
 
@@ -52,6 +53,7 @@ var (
 	deviceManager dm.DeviceManager
 
 	akamaiBmpVersions = map[string]interface{}{
+		"4.2.1": bmp421.NewStable,
 		"4.0.2": bmp402.NewStable,
 		"3.3.9": bmp339.NewStable,
 		"3.3.4": bmp334.NewStable,
@@ -163,4 +165,4 @@ func main() {
 	http.HandleFunc("/akamai/bmp", handleBmpRequest)
 	log.Printf("[+] BMP server on %s (devices: %s)", addr, devicePath)
 	log.Fatal(http.ListenAndServe(addr, nil))
-} 
+}
