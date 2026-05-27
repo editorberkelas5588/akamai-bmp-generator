@@ -20,6 +20,7 @@ import (
 	bmp330 "xvertile/akamai-bmp/bm/3.3.0"
 	bmp331 "xvertile/akamai-bmp/bm/3.3.1"
 	bmp334 "xvertile/akamai-bmp/bm/3.3.4"
+	bmp421 "xvertile/akamai-bmp/bm/4.2.1"
 	"xvertile/akamai-bmp/dm"
 	devicemanager "xvertile/akamai-bmp/dm"
 )
@@ -49,6 +50,7 @@ type AkamaiBmpGen interface {
 var deviceManager devicemanager.DeviceManager
 
 var akamaiBmpVersions = map[string]interface{}{
+	"4.2.1": bmp421.NewStable,
 	"3.3.4": bmp334.NewStable,
 	"3.3.1": bmp331.NewStable,
 	"3.3.0": bmp330.NewStable,
